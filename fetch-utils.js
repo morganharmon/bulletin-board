@@ -3,3 +3,22 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
+export async function signUpUser(email, password) {
+    const response = await client.auth.signUp({ email, password });
+    if (response.user) {
+        return response.user;
+    } else {
+        console.error(response.error);
+    }
+}
+
+export async function redirectHome() {
+    if ((getUser)) {
+        window.location.href = '/';
+    }
+}
+
+export function getUser() {
+    return client.auth.session() && client.auth.session().user;
+
+}

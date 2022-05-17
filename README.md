@@ -21,9 +21,11 @@ events:
 
 
 order:
-first create the skeleton of page elements
-login/logout shouldn't depend on anything else so that can be next
-then create post can be done but I don't know how to send/retrieve user data from supabase yet
+1. first create the skeleton of page elements
+2. login/logout shouldn't depend on anything else so that can be next
+3. test for a pure render function
+4. create render post function and pass test
+5. then create post can be done but I don't know how to send/retrieve user data from supabase yet
 
 
 1) **Make a drawing of your app. Simple "wireframes"** 

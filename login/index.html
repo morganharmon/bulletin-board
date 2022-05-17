@@ -6,21 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
     <title>Bulletin board login</title>
 </head>
 <body>
     <button id="homeButton">Home</button>
-    <form>
+    <form id="sign-up-form">
         <label>Email</label>
-        <input type="text" id="email">
+        <input type="text" name="email" id="sign-up-email">
         <label>Password</label>
-        <input type="text" id="password">
-        <button id="sign-in">Sign in</button>
+        <input type="password" name="password" id="sign-up-password">
         <button id="sign-up">New account</button>
     </form>
+    <!-- <form id="sign-in-form">
+        <label>Email</label>
+        <input type="text" id="sign-in-email">
+        <label>Password</label>
+        <input type="password" id="sign-in-password">
+        <button id="sign-in">Sign in</button>
+    </form> -->
     <script type="module" src="./login.js"></script>
 </body>
 </html>
