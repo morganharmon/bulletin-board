@@ -37,3 +37,8 @@ export async function logOut() {
     await client.auth.signOut();
     return (window.location.href = '/');
 }
+
+export async function checkAuth() {
+    const user = getUser();
+    if (!user) window.location.href = '/';
+}
