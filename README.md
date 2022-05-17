@@ -8,12 +8,21 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 
 1. Page should show a bulletin board with users' posts.
 2. The header should have links to a login page and a create posts page
-3. login page should allow you to sign up or sign in
-4. create post page should allow you to enter a title, description, and contact
+3. login page should have inputs for email and pw, a sign up button, a sign in button, and a home button
+4. create post page should allow you to enter a title, description, and contact, and have a submit post button and a home button
 5. current list of posts should be stored in supabase and displayed on page load
 
+events:
+- when you load the home page it should render the posts that have been saved to supabase
+- when you click on sign in, it should take you to a new page that allows you to input your email/pw and buttons to either sign in or sign up. There should be a home button as well.
+- if already signed in, the sign in button should be 'log out' instead.
+- when you click create post, if you are not signed in, it should redirect you to the sign in page. If you are signed in, it should take you to the create post page.
+- when you click on submit post, it should send the data from the input fields to supabase, and then return you to the home page
+
+
+order:
 first create the skeleton of page elements
-login/logout shouldn't depend on anything else so that can be first
+login/logout shouldn't depend on anything else so that can be next
 then create post can be done but I don't know how to send/retrieve user data from supabase yet
 
 
