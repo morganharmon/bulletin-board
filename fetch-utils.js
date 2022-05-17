@@ -22,3 +22,13 @@ export function getUser() {
     return client.auth.session() && client.auth.session().user;
 
 }
+
+export async function signInUser(email, password) {
+    const response = await client.auth.signIn({ email, password });
+    if (response.user) {
+        return response.user;
+    } else {
+        console.error(response.user);
+    }
+
+}
