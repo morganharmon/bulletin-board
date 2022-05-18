@@ -20,7 +20,6 @@ export async function redirectHome() {
 
 export function getUser() {
     return client.auth.session() && client.auth.session().user;
-
 }
 
 export async function signInUser(email, password) {
@@ -30,7 +29,6 @@ export async function signInUser(email, password) {
     } else {
         console.error(response.user);
     }
-
 }
 
 export async function logOut() {

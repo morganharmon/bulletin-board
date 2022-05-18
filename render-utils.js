@@ -9,7 +9,6 @@ export function renderPost(post) {
     p2.textContent = post.contact;
 
     div.append(h2, p1, p2);
-    console.log(div);
     return div;
 
 }

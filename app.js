@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 
-import { logOut } from './fetch-utils.js';
+import { getUser, logOut } from './fetch-utils.js';
 
 // let state
 const signInButton = document.getElementById('sign-in-button');
@@ -22,3 +22,10 @@ logOutButton.addEventListener('click', async () => {
 
 });
 
+window.addEventListener('load', async () => {
+    const user = await getUser();
+    if (user) {
+        signInButton.classList.add('hidden');
+        logOutButton.classList.remove('hidden');
+    }
+});
