@@ -12,6 +12,7 @@ const postSec = document.getElementById('postSec');
 signInButton.addEventListener('click', () => {
     window.location.href = './login';
 });
+
 createPostButton.addEventListener('click', () => {
     window.location.href = './create post';
 });
@@ -20,3 +21,4 @@ logOutButton.addEventListener('click', async () => {
     await logOut();
 
 });
+

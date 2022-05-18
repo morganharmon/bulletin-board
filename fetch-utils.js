@@ -42,3 +42,9 @@ export async function checkAuth() {
     const user = getUser();
     if (!user) window.location.href = '/';
 }
+
+export async function fetchPosts() {
+    const response = await client.from('bulletin-board').select('*');
+    console.log(response.data);
+    return response.data;
+}
