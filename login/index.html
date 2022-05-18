@@ -12,21 +12,24 @@
     <title>Bulletin board login</title>
 </head>
 <body>
-    <button id="homeButton">Home</button>
-    <form id="sign-up-form">
-        <label>Email</label>
-        <input type="text" name="email" id="sign-up-email">
-        <label>Password</label>
-        <input type="password" name="password" id="sign-up-password">
-        <button id="sign-up">New account</button>
-    </form>
-    <form id="sign-in-form">
-        <label>Email</label>
-        <input type="text" name="email" id="sign-in-email">
-        <label>Password</label>
-        <input type="password" name="password" id="sign-in-password">
-        <button id="sign-in">Sign in</button>
-    </form>
+    <div id="authDiv">
+        <button id="homeButton">Home</button>
+        <div id="forms"><form id="sign-up-form">
+            <label>Email</label>
+            <input type="text" name="email" id="sign-up-email">
+            <label>Password</label>
+            <input type="password" name="password" id="sign-up-password">
+            <button id="sign-up">New account</button>
+        </form>
+        <form id="sign-in-form">
+            <label>Email</label>
+            <input type="text" name="email" id="sign-in-email">
+            <label>Password</label>
+            <input type="password" name="password" id="sign-in-password">
+            <button id="sign-in">Sign in</button>
+        </form>
+        </div>
+        </div>
     <script type="module" src="./login.js"></script>
 </body>
 </html>

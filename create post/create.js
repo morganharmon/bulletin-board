@@ -1,4 +1,4 @@
-import { createNewPost } from '../fetch-utils.js';
+import { createNewPost, checkAuth } from '../fetch-utils.js';
 
 const homeButton = document.getElementById('homeButton');
 const form = document.getElementById('form');
@@ -11,7 +11,6 @@ homeButton.addEventListener('click', () => {
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = new FormData(form);
-    console.log(data);
     const post = {
         title: data.get('title'),
         description: data.get('description'),
@@ -19,4 +18,8 @@ form.addEventListener('submit', async (e) => {
     };
     await createNewPost(post);
     window.location.href = '/';
+});
+
+window.addEventListener('load', async () => {
+    await checkAuth();
 });

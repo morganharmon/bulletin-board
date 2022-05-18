@@ -38,7 +38,7 @@ export async function logOut() {
 
 export async function checkAuth() {
     const user = getUser();
-    if (!user) window.location.href = '/';
+    if (!user) window.location.href = '../login';
 }
 
 export async function fetchPosts() {
