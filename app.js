@@ -1,6 +1,7 @@
 // import functions and grab DOM elements
 
-import { getUser, logOut } from './fetch-utils.js';
+import { fetchPosts, getUser, logOut } from './fetch-utils.js';
+import { renderPost } from './render-utils.js';
 
 // let state
 const signInButton = document.getElementById('sign-in-button');
@@ -27,5 +28,14 @@ window.addEventListener('load', async () => {
     if (user) {
         signInButton.classList.add('hidden');
         logOutButton.classList.remove('hidden');
+    } else {
+        signInButton.classList.remove('hidden');
+        logOutButton.classList.add('hidden');
     }
+    const posts = await fetchPosts();
+    for (let post of posts) {
+        const div = renderPost(post);
+        postSec.append(div);
+    }
+
 });
