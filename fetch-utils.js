@@ -43,6 +43,14 @@ export async function checkAuth() {
 
 export async function fetchPosts() {
     const response = await client.from('bulletin-board').select('*');
-    console.log(response.data);
     return response.data;
+}
+
+export async function createNewPost(post) {
+    const response = await client.from('bulletin-board').insert(post);
+    if (response.data) {
+        return response.data;
+    } else {
+        console.error(response.error);
+    }
 }
