@@ -54,3 +54,14 @@ export async function createNewPost(post) {
         console.error(response.error);
     }
 }
+
+export async function deletePost(post) {
+    await client.from('bulletin-board').delete().match({ id: post.id });
+    window.location.href = '/';
+    return;
+}
+
+export async function editPost(post) {
+    await client.from('bulletin-board').update({ title: post.title, description: post.description, contact: post.contact }).match({ id: post.id });
+    return;
+}

@@ -44,7 +44,7 @@ main {
     margin-bottom: calc(var(--footer-height));
 }
 
-#sign-in-button, #log-out-button, #create-post-button {
+#sign-in-button, #log-out-button, #create-post-button, #delete-button, #edit-button {
     height: 60%;
     background-color: var(--color5);
     border: solid 1px;
