@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Rock+Salt&family=Work+Sans:wght@400;500;800&display=swap');
 
 body {
     /* feel free to update these css variables for a quick theme */
     
-    --color1: white;
+    /* --color1: white;
     --color2: white;
     --color3: white;
     --color4: white;
-    --color5: white;
+    --color5: white; */
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
@@ -16,17 +17,21 @@ body {
     --color4: hsla(187, 41%, 94%, 1);
     --color5: hsla(170, 28%, 95%, 1); */
 
-    /* --color1: hsla(45, 86%, 83%, 1);
+    --color1: hsla(45, 86%, 83%, 1);
     --color2: hsla(135, 65%, 98%, 1);
     --color3: hsla(315, 37%, 86%, 1);
     --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
+    --color5: hsla(224, 40%, 79%, 1);
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
-    
+
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Rock Salt', cursive;
+    font-family: 'Work Sans', sans-serif;
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
 }
@@ -39,26 +44,45 @@ main {
     margin-bottom: calc(var(--footer-height));
 }
 
-section {
+#sign-in-button, #log-out-button, #create-post-button, #delete-button, #edit-button {
+    height: 60%;
     background-color: var(--color5);
-    max-width: 80%;
+    border: solid 1px;
+    border-radius: 15px;
+    width: 100px;
+}
+
+section {
+    background-image: url('../assets/chalkboard.jpg');
+    background-size: cover;
+    background-position: fixed;
+    background-color: var(--color5);
+    width: 100%;
+    height: 100%;
+    box-sizing:border-box;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: var(--gutter);
     margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+    flex-wrap: wrap;
+}
+
+#headerDiv {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    background-color: var(--color3);
+    height: var(--header-height);
+    box-shadow: var(--shadow)
 }
 
 header {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    height: var(--header-height);
-    box-shadow: var(--shadow);
+    
 }
 
 
@@ -76,7 +100,7 @@ header img {
 }
 
 p {
-    margin: var(--gutter);
+    margin: 15px;
 }
   
 footer {

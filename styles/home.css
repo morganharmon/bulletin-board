@@ -1,1 +1,99 @@
 /* add home page styles here */
+.hidden {
+    display: none;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    flex-wrap: wrap;
+    min-width: 300px;
+    max-width: 300px;
+    /* font-family: 'Abril Fatface', cursive; */
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Rock Salt', cursive;
+    /* font-family: 'Work Sans', sans-serif; */
+    color: lightgray;
+}
+
+#forms {
+    display: flex;
+    flex-direction: row;
+}
+
+#createDiv {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    background-color: var(--color1);
+    height: 100%;
+}
+
+#authDiv {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--color1);
+    height: 100%;
+}
+
+#homeButton {
+    width: 100px;
+    margin: 30px;
+    background-color: var(--color5);
+    border: solid 1px;
+    border-radius: 15px;
+    height: 30px;
+}
+
+#description {
+    height: 80px;
+}
+
+#form {
+    border: solid 1px;
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+    font-size: larger;
+}
+
+#sign-up-form {
+    border: solid 1px;
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+    font-size: larger;
+}
+
+#sign-in-form {
+    border: solid 1px;
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+    font-size: larger;
+}
