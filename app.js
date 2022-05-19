@@ -45,13 +45,13 @@ editButton.addEventListener('click', async () => {
     const prompt = window.prompt('Post title?', 'enter title');
     for (let post of posts) {
         if (prompt.toLowerCase() === post.title.toLowerCase()) {
-            const title = window.prompt(`Enter new post title:`, post.title);
+            const title = window.prompt('Enter new post title:');
             const description = window.prompt('Enter new description:', post.description);
             const contact = window.prompt('Enter new contact', post.contact);
-            const obj = { title: title, description: description, contact: contact };
-            const newPost = await editPost(obj);
-            console.log(newPost);
-        } else return;
+            const obj = { id: post.id, title: title, description: description, contact: contact };
+            await editPost(obj);
+            window.location.href = '/';
+        }
     }
 });
 
